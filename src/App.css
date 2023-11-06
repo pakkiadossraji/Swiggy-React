@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+}
+.Header-div{
+    display: flex;
+    justify-content: space-between;
+    margin:10px;
+    align-items: center;
+    padding-right: 32px;
+    border: 1px solid #000;
+}
+.nav-items > ul{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+.app-logo{
+    width: 100px;
+    height: 100px;
+}
+.image-card{
+    width: 254px;
+    margin: 10px;
+}
+.cardimg{
+    width: 100%;
+    height: 200px;
+    border-radius: 18px;
+    object-fit: fill;
+}
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+.content-placeholder {
+    display: inline-block;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: placeHolderShimmer;
+    animation-name: placeHolderShimmer;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    background: #FAFAFA;
+    background: -webkit-gradient(linear,left top,right top,color-stop(8%,#F1F1F1),color-stop(18%,#ddd),color-stop(33%,#F1F1F1));
+    background: -webkit-linear-gradient(left,#F1F1F1 8%,#ddd 18%,#F1F1F1 33%);
+    background: linear-gradient(to right,#F1F1F1 8%,#ddd 18%,#F1F1F1 33%);
+    -webkit-background-size: 800px 104px;
+    background-size: 800px 104px;
+    position: relative;
+}
+@keyframes placeHolderShimmer{
+     0% {
+    background-position: -468px 0;
+}
+100% {
+    background-position: 468px 0;
+}
+}
+.shimmer-div{
+    width: 300px;
+    height: 300px;
+}
+.search-div{
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+.search-field{
+    padding: 8px 12px;
+    font-size: 16px;
+}
+.search-btn{
+    background-color: #202020;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    padding: 8px;
+}
+.resInfo-img{
+    width: 328px;
+    height: 328px;
+}
+.resInfo-flex{
+    display: flex;
+}
+.restaurant-list > a{
+    text-decoration: none;
+    color: #000;
+}
