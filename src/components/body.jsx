@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utilis/helper";
+import useOnline from "../utilis/useOnline";
 
 const Body = () =>{
     const [searchInput,setSearchInput] = useState();
@@ -21,6 +22,10 @@ const Body = () =>{
         setAllRestaurants(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurants(jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
+    }
+    const isOnline = useOnline();
+    if(!isOnline){
+        return <h1>Offline,Please check your internet connection </h1>
     }
 // not render component
     if(!allRestaurants) return null;

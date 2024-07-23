@@ -83,13 +83,55 @@ body{
     padding: 8px;
 }
 .resInfo-img{
-    width: 328px;
-    height: 328px;
+    width: 417px;
+    height: 308px;
 }
 .resInfo-flex{
     display: flex;
+    flex-direction: column;
 }
 .restaurant-list > a{
     text-decoration: none;
     color: #000;
+}
+.addtoCart-btn,.clear-cartbtn{
+    padding: 8px;
+    background-color: rgb(89, 141, 11);
+    border: none;
+    cursor: pointer;
+}
+.menu-list{
+    border: 1px solid #c0c0c0;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+.menu-list >li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-card{
+    padding: 12px;
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+}
+.menu-card-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+}
+.menu-card >ul{
+    padding: 0px;
+}
+.menulist-img{
+    width: 135px;
+    height: 135px;
+}
+.cartItem-flex{
+    display: flex;
+    flex-wrap: wrap;
 }

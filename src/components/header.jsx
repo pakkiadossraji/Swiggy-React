@@ -1,5 +1,7 @@
 import { useState } from "react"
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
+import store from "../utilis/store"
 
 
 const Heading = () => {
@@ -16,6 +18,8 @@ const Heading = () => {
   const HeaderComponent = () => {
 const [loggedIn,setLoggedIn] = useState(false);
 
+const cartItems = useSelector(store => store.cart.items);
+console.log(cartItems,"cartitems")
     return (
         <div className="Header-div">
           <Heading/>
@@ -24,13 +28,14 @@ const [loggedIn,setLoggedIn] = useState(false);
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
                 <li><Link to="/about">About</Link></li>
-                <li><Link to="/">Cart</Link></li>
+                <li><Link to="/cart">Cart -{cartItems.length} items</Link></li>
+                <li><Link to="/instamart">Instamart</Link></li>
               </ul>
             </div>
             {loggedIn ? (<button onClick={()=>setLoggedIn(false)}>Log Out</button>
             ):(
             <button onClick={()=>setLoggedIn(true)}>Log In</button>)}
         </div>
-    )
+    ) 
   }
   export default HeaderComponent 
